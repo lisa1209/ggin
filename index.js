@@ -4,18 +4,31 @@
 
 
 
-
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
 //const {Card, Suggestion} = require('dialogflow-fulfillment');
 
 const admin = require('firebase-admin');
-admin.initializeApp(
+
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAxbQm5nrXZpSdc3vur04uBQsJ-AwqKNFk",
+    authDomain: "ginraibot.firebaseapp.com",
+    databaseURL: "https://ginraibot.firebaseio.com",
+    projectId: "ginraibot",
+    storageBucket: "ginraibot.appspot.com",
+    messagingSenderId: "1046614278689"
+  };
+
+admin.initializeApp(config);
+</script>
 //   {
 //   credential: admin.credential.applicationDefault(),
 //  databaseURL: 'https://ginraibot.firebaseio.com/'
 // }
-);
+//);
 
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 
